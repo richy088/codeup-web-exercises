@@ -1,0 +1,7 @@
+.idea/*
+*.iml
+.DS_Store
+keys.js
+#prevents keys from becoming public in git
+#excludes all *.iml files
+
