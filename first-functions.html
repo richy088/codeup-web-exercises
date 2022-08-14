@@ -6,147 +6,163 @@
 </head>
 <body>
   <script>
-    function convertToKm(miles) {
-      return miles * 1.609;
-    }
+    // function convertToKm(miles) {
+    //   return miles * 1.609;
+    // }
+    //
+    // function convertToLiters(gallons) {
+    //   return gallons * 3.785;
+    // }
+    //
+    // function convertToF(C) {
+    //     return ((C*1.8)+32);
+    // }
+    //
+    // function isOdd(number) {
+    //     return Math.abs(number) % 2 === 0;
+    //     // comp will evaluate expression and then print out whether true or false
+    // }
+    //
+    // // #1:
+    // function divBy7Or3(num) {
+    //     return (num % 7 === 0 || num % 3 == 0 ? true : false);
+    // }
+    // divBy7Or3("15");
+    //
+    // // #2:
+    // function divBy3Or2(num) {
+    //     return (num % 3 === 0 || num % 2 == 0 ? true : false);
+    // }
+    // divBy3Or2("15");
+    //
+    // // #3:
+    // function oddAnd3(num) {
+    //     return (num % 2 !== 0 && num % 3 == 0 ? true : false);
+    // }
+    // oddAnd3("5");
+    //
+    // // #4:
+    //
+    // function oddOr3(num) {
+    //     return (num % 2 !== 0 || num % 3 == 0 ? true : false);
+    // }
+    // oddOr3("6");
+    //
+    // function nameGenerator(first, middle, last) {
+    //     return `${first} ${middle} ${last}`;
+    // }
+    //
+    // nameGenerator("Richard", "J", "Kim");
+    //
+    // function address(houseNum, streetName, city, state, zipCode) {
+    //     return `${houseNum} ${streetName} ${city} ${state} ${zipCode}`
+    // }
+    //
+    // address("7714", "Louis Pasteur", "San Antonio", "TX", "78229");
+    //
+    // function isFahrenheit(temp, verdict) {
+    //     return (verdict === true ? `The temperature is ${Math.floor((temp - 32) * (5/9))} degrees Celsius` : `The temperature is ${Math.floor((temp * 1.8) + 32)} degrees Fahrenheit`);
+    // }
+    //
+    // isFahrenheit(100, true);
+    //
+    // function convertToKm(miles) {
+    //     return miles * 1.609;
+    // }
+    //
+    // function convertToMiles(km) {
+    //     return km * .0621;
+    //
+    // }
+    //
+    // function convertToLiters(gallons) {
+    //     return gallons * 3.785;
+    // }
+    //
+    // function converToGallons(liters) {
+    //     return liters * 0.264;
+    // }
+    //
+    // function uppercase(string) {
+    //     return string.toUpperCase();
+    // }
+    //
+    // uppercase("Richard");
+    //
+    // function lowercase(string) {
+    //     return string.toLowerCase();
+    // }
+    //
+    // lowercase("Richard");
+    //
+    // function trim(string) {
+    //     return string.trim();
+    // }
+    //
+    // trim(" Richard");
+    //
+    // function checkChar(string) {
+    //     return string.length;
+    // }
+    //
+    // function indexOfChar(char, string) {
+    //     let result = string.indexOf(char);
+    //     return result;
+    // }
+    //
+    // indexOfChar("i", "Richard");
+    //
+    // // Create a function that takes three strings and returns a copy of the first string with the first instance
+    // // of the second string substituted for the characters of the third string.
+    //
+    // function threeStrings(string1, string2, string3) {
+    //     return string1.replace('string2', 'string3');
+    // }
+    //
+    // threeStrings("richard", "i", "y");
+    //
+    //
+    // function threeStringsAgain(string1, string2, string3) {
+    //     return string1.replaceAll('string2', 'string3');
+    // }
+    //
+    //
+    // // Create a function that takes a string and two numbers and returns
+    // // the subset of the original string assuming the two numbers are indexes.
+    //
+    // function stringTwoNums(string, number1, number2) {
+    //     if  (string.includes(number1) && string.includes(number2)) {
+    //         return string.substring(number1, number2);
+    //     }
+    // }
+    //
+    // //function expression:
+    // const bark = function() {
+    //     console.log("woof");
+    // }
+    //
+    // //arrow functions:
+    // function add(num1, num2) {
+    //     return num1 + num2;
+    // }
+    //
+    // const add = (num1, num2) => num1 + num2;
 
-    function convertToLiters(gallons) {
-      return gallons * 3.785;
-    }
+    const favColor = prompt("What is your favorite color?");
 
-    function convertToF(C) {
-        return ((C*1.8)+32);
-    }
-
-    function isOdd(number) {
-        return Math.abs(number) % 2 === 0;
-        // comp will evaluate expression and then print out whether true or false
-    }
-
-    // #1:
-    function divBy7Or3(num) {
-        return (num % 7 === 0 || num % 3 == 0 ? true : false);
-    }
-    divBy7Or3("15");
-
-    // #2:
-    function divBy3Or2(num) {
-        return (num % 3 === 0 || num % 2 == 0 ? true : false);
-    }
-    divBy3Or2("15");
-
-    // #3:
-    function oddAnd3(num) {
-        return (num % 2 !== 0 && num % 3 == 0 ? true : false);
-    }
-    oddAnd3("5");
-
-    // #4:
-
-    function oddOr3(num) {
-        return (num % 2 !== 0 || num % 3 == 0 ? true : false);
-    }
-    oddOr3("6");
-
-    function nameGenerator(first, middle, last) {
-        return `${first} ${middle} ${last}`;
-    }
-
-    nameGenerator("Richard", "J", "Kim");
-
-    function address(houseNum, streetName, city, state, zipCode) {
-        return `${houseNum} ${streetName} ${city} ${state} ${zipCode}`
-    }
-
-    address("7714", "Louis Pasteur", "San Antonio", "TX", "78229");
-
-    function isFahrenheit(temp, verdict) {
-        return (verdict === true ? `The temperature is ${Math.floor((temp - 32) * (5/9))} degrees Celsius` : `The temperature is ${Math.floor((temp * 1.8) + 32)} degrees Fahrenheit`);
-    }
-
-    isFahrenheit(100, true);
-
-    function convertToKm(miles) {
-        return miles * 1.609;
-    }
-
-    function convertToMiles(km) {
-        return km * .0621;
-
-    }
-
-    function convertToLiters(gallons) {
-        return gallons * 3.785;
-    }
-
-    function converToGallons(liters) {
-        return liters * 0.264;
-    }
-
-    function uppercase(string) {
-        return string.toUpperCase();
-    }
-
-    uppercase("Richard");
-
-    function lowercase(string) {
-        return string.toLowerCase();
-    }
-
-    lowercase("Richard");
-
-    function trim(string) {
-        return string.trim();
-    }
-
-    trim(" Richard");
-
-    function checkChar(string) {
-        return string.length;
-    }
-
-    function indexOfChar(char, string) {
-        let result = string.indexOf(char);
-        return result;
-    }
-
-    indexOfChar("i", "Richard");
-
-    // Create a function that takes three strings and returns a copy of the first string with the first instance
-    // of the second string substituted for the characters of the third string.
-
-    function threeStrings(string1, string2, string3) {
-        return string1.replace('string2', 'string3');
-    }
-
-    threeStrings("richard", "i", "y");
-
-
-    function threeStringsAgain(string1, string2, string3) {
-        return string1.replaceAll('string2', 'string3');
-    }
-
-
-    // Create a function that takes a string and two numbers and returns
-    // the subset of the original string assuming the two numbers are indexes.
-
-    function stringTwoNums(string, number1, number2) {
-        if  (string.includes(number1) && string.includes(number2)) {
-            return string.substring(number1, number2);
+    function analyzeColor(favColor) {
+        if (favColor === "blue") {
+            alert("blue is the color of the sky");
+        } else if (favColor === "red") {
+            alert("Strawberries are red");
+        } else if (favColor === "cyan") {
+            alert("I don't know anything about cyan");
+        } else {
+            alert("I don't know anything about that color");
         }
     }
 
-    //function expression:
-    const bark = function() {
-        console.log("woof");
-    }
-
-    //arrow functions:
-    function add(num1, num2) {
-        return num1 + num2;
-    }
-
-    const add = (num1, num2) => num1 + num2;
+    analyzeColor(favColor);
 
   </script>
 </body>
