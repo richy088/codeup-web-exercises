@@ -70,6 +70,6 @@ describe('add', function() {
         expect(typeof add).toBe('function');
     });
     it('should return sum of two numbers or NaN', function() {
-        expect(typeof add("banana", "split")).toBe("number");
+        expect(isNaN(add("banana", "split"))).toBe(NaN);
     });
 })

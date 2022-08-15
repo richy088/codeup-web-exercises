@@ -33,10 +33,10 @@ function isVowel(string) {
 }
 
 function add(val1, val2) {
-    if (val1 === !NaN && val2 === !NaN) {
-        return parseInt(val1) + parseInt(val2);
-    } else {
+    if (val1 === NaN && val2 === NaN) {
         return NaN;
+    } else {
+        return parseInt(val1) + parseInt(val2);
     }
 }
 
