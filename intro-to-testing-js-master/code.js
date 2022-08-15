@@ -27,3 +27,8 @@ function isEven(string) {
         return false;
     }
 }
+
+function isVowel(string) {
+    return /[aeiou]/.test(string);
+}
+

@@ -55,3 +55,12 @@ describe('isEven', function() {
         expect(typeof isEven(Infinity)).toBe("boolean");
     });
 })
+
+describe('isVowel', function() {
+    it('should be a defined function', function() {
+        expect(typeof isVowel).toBe('function');
+    });
+    it('should return boolean regardless of input', function() {
+        expect(typeof isVowel("f")).toBe("boolean");
+    });
+})
