@@ -11,3 +11,11 @@ function sayHello(string) {
         return "Hello," + " " + string + "!";
     }
 }
+
+function isFive(string) {
+    if (parseInt(string) === 5) {
+        return true;
+    } else {
+        return false;
+    }
+}
