@@ -19,3 +19,11 @@ function isFive(string) {
         return false;
     }
 }
+
+function isEven(string) {
+    if (string % 2 === 0) {
+        return true;
+    } else {
+        return false;
+    }
+}

@@ -46,3 +46,12 @@ describe('isFive', function() {
         expect(typeof isFive("5")).toBe("boolean");
     });
 })
+
+describe('isEven', function() {
+    it('should be a defined function', function() {
+        expect(typeof isEven).toBe('function');
+    });
+    it('should return boolean regardless of input', function() {
+        expect(typeof isEven(Infinity)).toBe("boolean");
+    });
+})
