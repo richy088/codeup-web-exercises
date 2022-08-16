@@ -34,3 +34,24 @@ function tenRandom() {
 tenRandom();
 
 // #4:
+
+let num = "";
+function numTriangle(string) {
+    for (let i = 1; i < string; i++) {
+        for (let j = 1; j <= i; j++) {
+            num += i;
+        }
+        num += "\n"
+    }
+    console.log(num);
+}
+
+numTriangle(10);
+
+// #5:
+
+function minusFive() {
+    for (let i = 100; i > 0; i-=5) {
+        console.log(i);
+    }
+}
