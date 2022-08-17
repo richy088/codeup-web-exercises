@@ -30,7 +30,7 @@
     let planetWithBreaks = planetsArray.join('<br>');
     console.log(planetWithBreaks);
 
-    let ulString = planetsArray.join('<li></li>')
+    let ulString = `<ul><li>${planetsArray.join('</li><li>')}</li></ul>`;
     console.log(ulString);
 })();
 
