@@ -12,7 +12,16 @@
      *  > console.log(person.lastName) // "Sanchez"
      */
 
+    const person = {
+        firstName: 'Rich',
+        lastName: "Kim",
+        sayHello: function() {
+            return `Hello from ${this.firstName} ${this.lastName}`;
+        }
+    };
 
+    console.log(person.firstName);
+    console.log(person.lastName);
 
     /**
      * TODO:
@@ -23,6 +32,9 @@
      * Example
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
+
+    console.log(person.sayHello());
+
 
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
@@ -38,11 +50,26 @@
      * and console.log the relevant messages for each person
      */
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
+
+
+    function discount(string) {
+        // if (amount > 200) {
+        //     return amount - (amount * .12);
+        // } else {
+        //     return amount;
+        // }
+    }
+
+    const shoppers = [
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320}
+    ];
+
+    shoppers.forEach(element => console.log(element));
+
+    // console.log(shoppers[0].amount); logs Cameron amount
+    console.log(`${shoppers.[0].name} has to pay ${shoppers[0.amount]} before the discount and ${} after the discount`)
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
@@ -95,4 +122,4 @@
 
 })();
 
-console.log('hello');
+
