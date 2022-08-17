@@ -8,11 +8,11 @@ while (userNumber < 1 || userNumber > 50) {
     }
 }
 
-function userNum(userNumber) {
+function userNum(string) {
     for (let i = 0; i < 50; i++) {
         if (i % 2 !== 0) {
-            if (i == userNumber) {
-                console.log(`Yikes! Skipping number: ${userNumber}`);
+            if (i == string) {
+                console.log(`Yikes! Skipping number: ${string}`);
                 continue;
             }
         } else {
@@ -21,6 +21,8 @@ function userNum(userNumber) {
         console.log(`Here is an odd number: ${i}`);
     }
 }
+
+userNum(userNumber);
 
 
 
