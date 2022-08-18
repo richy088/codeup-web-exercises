@@ -46,7 +46,15 @@ function numTriangle(string) {
     console.log(num);
 }
 
-numTriangle(10);
+// numTriangle(10);
+//
+// for (let i = 1; i <= 9; i++) { //how many lines to create
+//     let outputString = "";
+//     for (let count = 0; count < i; count++) { //how many times to execute in each line
+//         outputString = outputString + i;
+//     }
+//     console.log(outputString);
+// }
 
 // #5:
 

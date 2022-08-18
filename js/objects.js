@@ -52,13 +52,13 @@
 
 
 
-    function discount(string) {
-        // if (amount > 200) {
-        //     return amount - (amount * .12);
-        // } else {
-        //     return amount;
-        // }
-    }
+    // function discount(string) {
+    //     if (amount > 200) {
+    //         return amount - (amount * .12);
+    //     } else {
+    //         return amount;
+    //     }
+    // }
 
     const shoppers = [
         {name: 'Cameron', amount: 180},
@@ -66,10 +66,12 @@
         {name: 'George', amount: 320}
     ];
 
-    shoppers.forEach(element => console.log(element));
+    // shoppers.forEach(element => console.log((element.name) + ` has to pay $${element.amount} before the discount and $${(element.amount > 200 ? element.amount - (element.amount *.12) : element.amount)} after the discount`));
+    shoppers.forEach(element => console.log(`${element.name} has to pay $${element.amount} before the discount and $${(element.amount > 200 ? element.amount - (element.amount *.12) : element.amount)} after the discount`));
+
 
     // console.log(shoppers[0].amount); logs Cameron amount
-    console.log(`${shoppers.[0].name} has to pay ${shoppers[0.amount]} before the discount and ${} after the discount`)
+    // console.log(`${shoppers.[0].name} has to pay ${shoppers[0.amount]} before the discount and ${} after the discount`)
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
@@ -83,6 +85,27 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+
+    let books = [
+            {title: 'App Kid',
+                author: {firstName: 'Michael',
+                    lastName: 'Sayman'}},
+            {title: 'The Lean Startup',
+                author: {firstName: 'Eric',
+                    lastName: 'Ries'}},
+            {title: 'The Formula',
+                author: {firstName: 'Ronald',
+                    lastName: 'Ferguson'}},
+            {title: 'American Baby',
+                author: {firstName: 'Gabrielle',
+                    lastName: 'Glaser'}},
+            {title: 'Never Split the Difference',
+                author: {firstName: 'Chris',
+                    lastName: 'Voss'}}
+    ];
+
+    console.log(books.indexOf(books.title));
+
 
     /**
      * TODO:
@@ -108,6 +131,17 @@
      *      ---
      *      ...
      */
+
+    books.forEach((element, index) => console.log("Book #" +  (index + 1) + "\n" + "Title: " + (element.title) + "\n" + "Author: " + (element.author.firstName) + " " + (element.author.lastName)
+    ));
+    // console.log(books.indexOf({title: 'App Kid', author: {firstName: 'Michael', lastName: 'Sayman'}}) + 2);
+    // books.forEach(function callback(v) {
+    //     console.log(v);
+    // });
+
+    // console.log(books.indexOf(books.title));
+
+    console.log(books);
 
     /**
      * Bonus:
