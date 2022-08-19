@@ -105,6 +105,8 @@
     ];
 
     console.log(books.indexOf(books.title));
+    console.log("------------------------")
+    console.log(books[0]);
 
 
     /**
@@ -141,7 +143,6 @@
 
     // console.log(books.indexOf(books.title));
 
-    console.log(books);
 
     /**
      * Bonus:
@@ -154,6 +155,21 @@
      *   `showBookInfo` function.
      */
 
+    console.log("*************************************")
+
+    function createBook(title, author) {
+
+        books = new Object()
+    }
+
+    createBook("Harry Potter", "JK Rowling");
+    console.log(books);
+
+    function showBookInfo(bookObject) {
+        console.log(books[bookObject])
+    }
+
+    showBookInfo("title");
 })();
 
 
