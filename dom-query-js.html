@@ -26,8 +26,8 @@
 </p>
     <button id="main-button">Main Header</button>
     <button id="sub-button">Sub Header</button>
-    <button></button>
-    <button></button>
+    <button id="list-button">List Button</button>
+    <button id="list-alternating">List Alternating Colors</button>
 <script>
     (function() {
         "use strict";
@@ -74,7 +74,7 @@
 
         subParagraph.innerHTML = "Mission Accomplished!";
 
-        //Main Header Button
+        // Main Header Button
         let changeMainHeader = function (event) {
             mainHeader.innerHTML === "Hello World!" ? mainHeader.innerHTML = "Javascript is Cool!" : mainHeader.innerHTML = "Hello World!";
         }
@@ -83,7 +83,7 @@
         btn1.addEventListener('click', changeMainHeader);
 
 
-        //Sub Header Button
+        // Sub Header Button
         let changeSubHeader = function (event) {
             subHeader.style.color === "blue" ? subHeader.style.color = "black" : subHeader.style.color = "blue";
         }
@@ -91,6 +91,30 @@
         let btn2 = document.getElementById("sub-button");
         btn2.addEventListener('click', changeSubHeader);
 
+        // List Button
+        let changeListColor = function (event) {
+            myArray[0].style.color === "blue" ? myArray[0].style.color = "black": myArray[0].style.color = "blue" ;
+        }
+
+        let btn3 = document.getElementById("list-button");
+        btn3.addEventListener('click', changeListColor);
+
+        // List Alternating Colors
+        let alternateListColors = function (event) {
+            let myArray = [];
+            myArray = listItems;
+            // console.log(myArray[1]);
+            // myArray[1].style.color = "red";
+
+            for (let i = 0; i < myArray.length; i++) {
+                if (i % 2 !== 0)   {
+                    myArray[i].style.color = "black";
+                }
+            }
+        }
+
+        let btn4 = document.getElementById("list-alternating");
+        btn4 = addEventListener('click', alternateListColors);
 
     })();
 </script>
