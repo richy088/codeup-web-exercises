@@ -24,7 +24,10 @@
     pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
     culpa qui officia deserunt mollit anim id est laborum.
 </p>
-
+    <button id="main-button">Main Header</button>
+    <button id="sub-button">Sub Header</button>
+    <button></button>
+    <button></button>
 <script>
     (function() {
         "use strict";
@@ -63,11 +66,29 @@
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
 
-        let subParagraph = document.getElementsByClassName("sub-paragraph");
+        let subParagraph = document.getElementsByClassName("sub-paragraph"); //how to get elements with class name?
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
 
         subParagraph.innerHTML = "Mission Accomplished!";
+
+        //Main Header Button
+        let changeMainHeader = function (event) {
+            mainHeader.innerHTML === "Hello World!" ? mainHeader.innerHTML = "Javascript is Cool!" : mainHeader.innerHTML = "Hello World!";
+        }
+
+        let btn1 = document.getElementById("main-button")
+        btn1.addEventListener('click', changeMainHeader);
+
+
+        //Sub Header Button
+        let changeSubHeader = function (event) {
+            subHeader.style.color === "blue" ? subHeader.style.color = "black" : subHeader.style.color = "blue";
+        }
+
+        let btn2 = document.getElementById("sub-button");
+        btn2.addEventListener('click', changeSubHeader);
+
 
     })();
 </script>
