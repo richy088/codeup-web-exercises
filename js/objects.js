@@ -157,19 +157,38 @@
 
     console.log("*************************************")
 
-    function createBook(title, author) {
-
-        books = new Object()
+    function createBook(title, firstName, lastName) {
+        return {
+            title: title,
+            author: {
+                firstName: firstName,
+                lastName: lastName
+            }
+        }
     }
 
-    createBook("Harry Potter", "JK Rowling");
-    console.log(books);
+    books.push(createBook("The Great Gatsby", "F. Scott", "Fitzgerald"));
 
-    function showBookInfo(bookObject) {
-        console.log(books[bookObject])
+    function Book(title,firstName,lastName) {
+        this.title = title;
+        this.author = {
+            firstName: firstName,
+            lastName: lastName
+        }
     }
 
-    showBookInfo("title");
+    books.push(new Book("1984", "George", "Orwell"));
+
+    function showBookInfo(book) {
+        console.log("title: " + book.title);
+        console.log(`Author: ${book.author.firstName} ${book.author.lastName}`);
+        console.log("---")
+    }
+
+    books.forEach(function(book, index){
+        console.log("BOok # " + (index + 1));
+        showBookInfo(book);
+    });
 })();
 
 
