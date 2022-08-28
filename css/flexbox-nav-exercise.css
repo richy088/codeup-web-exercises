@@ -1,0 +1,54 @@
+html {
+    box-sizing: border-box;
+}
+
+nav {
+    font-family: sans-serif;
+    color: black;
+    display: inline-block;
+    width: 100%;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    background-color: gainsboro;
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: blue;
+}
+
+.left-nav {
+    font-size: 14px;
+    display: flex;
+    margin-right: auto;
+    align-items: center;
+}
+
+.logo {
+    margin: 0 auto;
+    font-size: 3em;
+    padding: 0 .2em;
+}
+
+.right-nav {
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+    font-size: 14px;
+}
+
+.left-titles {
+    padding-right: 15px;
+}
+
+.right-titles {
+    padding-left: 15px;
+}
