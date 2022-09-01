@@ -27,9 +27,56 @@
                 <input class="form-control me-2" type="search" placeholder="Zip Code" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Search stores near you!</button>
             </form>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+            </svg>
             <a class="navbar-brand" href="#">Sign up!</a>
         </div>
     </div>
 </nav>
+    <div class="pizza-banner">
+        <div class="pizza-image"><img src="images/pizza.png">
+            <div class="title-bar">Welcome to Pizza World</div>
+        </div>
+    </div>
+<nav>
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+        <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Size and Crust</button>
+        <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Cheese and Sauce</button>
+        <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Toppings</button>
+    </div>
+</nav>
+<div class="tab-content" id="nav-tabContent">
+    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+        <div class="input-group">
+            <div class="card">
+                <div class="card-body">
+                    Hand Tossed
+                </div>
+            </div>
+        </div>
+        <div class="input-group">
+            <div class="card">
+                <div class="card-body">
+                    Garlic seasoned crust with a rich, buttery taste
+                </div>
+            </div>
+        </div>
+        <div class="input-group">
+            <div class="input-group-text">
+                <input class="form-check-input mt-0" type="radio" value="" aria-label="Radio button for following text input">Small (10")
+            </div>
+            <input type="text" class="form-control" aria-label="Text input with radio button">
+        </div>
+        <div class="input-group">
+            <div class="input-group-text">
+                <input class="form-check-input mt-0" type="radio" value="" aria-label="Radio button for following text input">Medium (12")
+            </div>
+            <input type="text" class="form-control" aria-label="Text input with radio button">
+        </div>
+    </div>
+    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...</div>
+    <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
+</div>
 </body>
 </html>
