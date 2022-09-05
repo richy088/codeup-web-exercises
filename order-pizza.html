@@ -73,18 +73,20 @@
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">Garlic seasoned with a rich, buttery taste.</li>
                     <!--                        Radio buttons-->
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            Small(10")
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            Medium(12")
-                        </label>
-                    </div>
+                    <ul class="list-group">
+                        <li class="list-group-item"><div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Small(10")
+                            </label>
+                        </div></li>
+                        <li class="list-group-item"><div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Medium(12")
+                            </label>
+                        </div></li>
+                    </ul>
                 </ul>
             </div>
 
@@ -96,18 +98,20 @@
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">Thin enough for optimum crispy to crunch ratio.</li>
                     <!--                        Radio buttons-->
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            Medium(12")
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            Large(14")
-                        </label>
-                    </div>
+                    <ul class="list-group">
+                        <li class="list-group-item"><div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Medium(12")
+                            </label>
+                        </div></li>
+                        <li class="list-group-item"><div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Large(14")
+                            </label>
+                        </div></li>
+                    </ul>
                 </ul>
             </div>
             <div class="card-footer">
@@ -181,7 +185,88 @@
             </div>
         </div>
     </div>
-    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+<!--    Third tab-->
+    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+        <div class="card" style="width: 18rem;">
+            <div class="card-header">
+                Choose Toppings
+            </div>
+            <!--                First card-->
+            <div class="card" style="width: 18rem;">
+                <div class="card-header">
+                    Choose Meats
+                </div>
+                    <!--                        Radio buttons-->
+                    <ul class="list-group">
+                        <li class="list-group-item"><div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Beef
+                            </label>
+                        </div></li>
+                        <li class="list-group-item"><div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Ham
+                            </label>
+                        </div></li>
+                        <li class="list-group-item"><div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Philly Steak
+                            </label>
+                        </div></li>
+                        <li class="list-group-item"><div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Bacon
+                            </label>
+                        </div></li>
+                    </ul>
+                </ul>
+            </div>
+
+            <!--                    Second card-->
+            <div class="card" style="width: 18rem;">
+                <div class="card-header">
+                    Choose Non-Meats
+                </div>
+                <!--                        Radio buttons-->
+                <ul class="list-group">
+                    <li class="list-group-item"><div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Green Peppers
+                        </label>
+                    </div></li>
+                    <li class="list-group-item"><div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Mushrooms
+                        </label>
+                    </div></li>
+                    <li class="list-group-item"><div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Onions
+                        </label>
+                    </div></li>
+                    <li class="list-group-item"><div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Jalapeno Peppers
+                        </label>
+                    </div></li>
+                </ul>
+                </ul>
+            </div>
+            <div class="card-footer">
+                <button type="button" class="btn btn-primary">Checkout <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                </svg></button>
+            </div>
+        </div>
+    </div>
 </div>
 
 <!--&lt;!&ndash;Incorrect&ndash;&gt;-->
