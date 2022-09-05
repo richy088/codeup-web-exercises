@@ -2,8 +2,28 @@
     height: 346px;
 }
 
-.title-bar {
+.zip-code {
+    text-align: left;
+}
+
+.search-button {
+    color: blue;
+    border: .1em blue solid;
+}
+
+.jumbotron {
+    background-image: url(/images/pizza.png);
+    height: 346px;
+    width: auto;
+    background-size: cover;
+}
+
+.pizza-signage {
     text-align: center;
-    background-color: gainsboro;
+    font-weight: bold;
+}
+
+.build-pizza {
+    margin-top: 40px;
 }
 
