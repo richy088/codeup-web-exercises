@@ -18,6 +18,10 @@
     background-size: cover;
 }
 
+.container {
+    width: 100%;
+}
+
 .pizza-signage {
     text-align: center;
     font-weight: bold;
@@ -26,4 +30,9 @@
 .build-pizza {
     margin-top: 40px;
 }
+
+.tab-content {
+    display: inline-block !important;
+}
+
 

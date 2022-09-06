@@ -1,0 +1,22 @@
+.main-header {
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.cody-title {
+    text-transform: uppercase;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: center;
+}
+
+.col {
+    margin: 50px 150px;
+}
+
+.hr-border {
+    border-top: 5px solid green;
+}
+
