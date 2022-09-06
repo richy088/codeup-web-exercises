@@ -36,14 +36,17 @@ h3 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    flex-grow: 1;
+    width: 33%;
 }
 
 .right-column {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    flex-grow: 2;
+}
+
+.dev-projects {
+    margin-bottom: 6em;
 }
 
 
