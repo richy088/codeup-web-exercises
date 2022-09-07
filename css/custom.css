@@ -48,3 +48,9 @@
     width: 100%;
 }
 
+.card-footer {
+    display: flex;
+    justify-content: end;
+}
+
+
