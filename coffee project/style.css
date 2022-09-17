@@ -1,0 +1,62 @@
+/*table {*/
+/*    border-collapse: collapse;*/
+/*    margin: 15px 0;*/
+/*}*/
+
+/*td, th {*/
+/*    border: 1px solid black;*/
+/*    padding: 5px 10px;*/
+/*}*/
+
+body {
+    font-family: sans-serif;
+}
+
+#coffees {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container {
+    display: flex;
+}
+
+h1 {
+    text-align: center;
+}
+
+.btn {
+    width: 100%;
+}
+
+.coffee-roast {
+    color: #aaaaaa;
+    padding-left: 8px;
+}
+
+.right-input {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 220px;
+}
+
+h1 {
+    padding-top: 50px;
+    padding-bottom: 80px;
+}
+
+.coffee-roast {
+    margin-right: 20px;
+}
+
+#roast-selection {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+#submit {
+    margin-bottom: 50px;
+}
+
