@@ -89,10 +89,13 @@ let coffees = [
 let tbody = document.querySelector('#coffees');
 let submitButton = document.querySelector('#submit');
 let roastSelection = document.querySelector('#roast-selection');
+let searchForCoffee = document.querySelector('#coffee-search');
 
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+
+searchForCoffee.addEventListener('keyup', updateCoffees);
 
 console.log(document.forms);
 
