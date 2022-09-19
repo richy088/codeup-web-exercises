@@ -30,14 +30,17 @@ function updateCoffees(e) {
             filteredCoffees.push(coffee);
         } else if (selectedRoast === "all" && coffeeSearch.value === "") {
             filteredCoffees.push(coffee);
-        } else if (coffee.roast === selectedRoast && coffeeSearch.value === coffee.name) {
+        } else if (coffee.roast === selectedRoast && coffeeSearch.value.toLowerCase() === coffee.name.toLowerCase()) {
             filteredCoffees.push(coffee);
         } else if (coffee.name.includes("City") && selectedRoast === "all") {
             filteredCoffees.push(coffee);
-        } else if (coffee.name.includes("City") && selectedRoast === "light") {
-            //City medium is showing up here for some reason...
-        filteredCoffees.push(coffee);
-    }
+        // } else if (coffee.name.includes("City") && selectedRoast === "light") {
+        //     //City medium is showing up here for some reason...
+        // filteredCoffees.push(coffee);
+            // if (filteredCoffees.length === 3) {
+            //     filteredCoffees.pop();
+            // }
+        }
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
@@ -51,15 +54,22 @@ function myFunction() {
             filteredCoffees1.push(coffee);
         } else if (selectedRoast1 === "all" && coffeeSearch.value === "") {
             filteredCoffees1.push(coffee);
-        } else if (coffee.roast === selectedRoast1 && coffeeSearch.value === coffee.name) {
+        } else if (coffee.roast === selectedRoast1 && coffeeSearch.value.toLowerCase() === coffee.name.toLowerCase()) {
             filteredCoffees1.push(coffee);
         } else if (coffee.name.includes("City") && selectedRoast1 === "all") {
             filteredCoffees1.push(coffee);
-        } else if (coffee.name.includes("City") && selectedRoast1 === "light") {
-            filteredCoffees1.push(coffee);
+        // } else if (coffee.name.includes("City") && selectedRoast1 === "light") {
+        //     filteredCoffees1.push(coffee);
+        //     if (filteredCoffees1.length === 3) {
+        //         filteredCoffees1.pop();
+        //     }
         }
     });
     tbody.innerHTML = renderCoffees(filteredCoffees1);
+}
+
+function addNewCoffee() {
+    console.log(coffees.push(coffeeAdd.value));
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
@@ -100,6 +110,14 @@ searchForCoffee.addEventListener('keyup', updateCoffees);
 console.log(document.forms);
 
 let coffeeSearch = document.getElementById('coffee-search');
+
+let roastSelection1 = document.querySelector('#roast-selection1');
+
+let coffeeAdd = document.querySelector('#coffeeAdd');
+
+let submitNewCoffee = document.querySelector('#submitNewCoffee');
+
+submitNewCoffee.addEventListener('click', addNewCoffee);
 
 // let submitCoffee = function (event) {
 //     alert(`You are searching for ${coffeeSearch.value}`);

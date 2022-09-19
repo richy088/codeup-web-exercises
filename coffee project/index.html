@@ -45,8 +45,8 @@
                     </select>
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Coffee Name</label>
-                    <input class="form-control" list="datalistOptions" id="coffee-search" type="text" placeholder="What type of coffee are you looking for?">
+                    <label for="coffee-search" class="form-label">Coffee Name</label>
+                    <input class="form-control" id="coffee-search" type="text" placeholder="What type of coffee are you looking for?">
                 </div>
                 <button id="submit" type="submit" class="btn btn-primary">Submit</button>
             </form>
@@ -54,19 +54,18 @@
             <form>
                 <h2>Add a Coffee</h2>
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Roast</label>
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Open this select menu</option>
+                    <label for="roast-selection1" class="form-label">Roast</label>
+                    <select id="roast-selection1" class="form-select" aria-label="Default select example">
                         <option value="1">light</option>
                         <option value="2">medium</option>
                         <option value="3">dark</option>
                     </select>
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Coffee Name</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1">
+                    <label for="coffeeAdd" class="form-label">Coffee Name</label>
+                    <input type="text" class="form-control" id="coffeeAdd" placeholder="What coffee would you like to add?">
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button id="submitNewCoffee" type="submit" class="btn btn-primary">Submit</button>
             </form>
         </div>
     </div>

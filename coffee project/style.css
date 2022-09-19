@@ -17,6 +17,11 @@ body {
     flex-wrap: wrap;
 }
 
+/*#coffees>* {*/
+/*    flex: 1 1 100px;*/
+/*    height: 90px;*/
+/*}*/
+
 .container {
     display: flex;
 }
@@ -54,7 +59,7 @@ h1 {
 }
 
 .coffee-roast {
-    margin-right: 20px;
+    margin-right: 150px;
 }
 
 #roast-selection {
