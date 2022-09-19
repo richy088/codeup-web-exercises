@@ -10,20 +10,26 @@
 </head>
 <body>
 <!--Create content in your HTML file using at least the following elements: h1, p, ul, li, div.-->
-    <h1>It's Monday!</h1>
-    <p>It's good to do something on Monday because then you associate Monday's with something fun</p>
-    <ul>Here are some fun things I do on Mondays
+    <h1 class="title">It's Monday!</h1>
+    <p id="monday-description">It's good to do something on Monday because then you associate Monday's with something fun</p>
+    <ul id="unordered-list">Here are some fun things I do on Mondays
         <li>Go to the movies</li>
         <li>Go get a drink</li>
         <li>Go out for dinner</li>
     </ul>
-    <div>Here is a random div element</div>
+    <div class="random-div">Here is a random div element</div>
 
 
   <script type="text/javascript">
-    $(function() {
-      alert('DOM has finished loading');
-    });
+      $('#monday-description, #unordered-list').css('background-color', 'yellow');
+    // let content = $('#monday-description, #unordered-list').html();
+    // alert(`These are some ids:${content}`)
+
+      //alert second id
+      let secondAlert = $('#unordered-list').html();
+      alert(secondAlert);
+
+
   </script>
 </body>
 </html>
