@@ -17,9 +17,9 @@
   let keyString = "";
   $(document).keyup(function(event){
     keyString += event.keyCode;
-    console.log(keyString);
     if (keyString === "38384040373937396566") {
       alert("You have added 30 lives!")
+      $('h1').css('color', 'red');
     }
   });
 
