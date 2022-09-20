@@ -24,25 +24,41 @@
     <p id="codeup">Tuesdays are also great because they are associate with tacos</p>
 
   <script type="text/javascript">
-      $('#monday-description, #unordered-list').css('background-color', 'yellow');
+      // $('#monday-description, #unordered-list').css('background-color', 'yellow');
     // let content = $('#monday-description, #unordered-list').html();
     // alert(`These are some ids:${content}`)
 
       //alert second id
-      let secondAlert = $('#unordered-list').html();
+      // let secondAlert = $('#unordered-list').html();
       // alert(secondAlert);
 
-      $('.codeup').css('border', '1px solid red');
+      // $('.codeup').css('border', '1px solid red');
 
       // When I assign multiple ids they all get the same change?
 
-      $('li').css('font-size', '20px');
-      $('h1, p, li').css('background-color', 'blue');
-
-      let h1Alert = $('h1').html()
-      alert(h1Alert);
+      // $('li').css('font-size', '20px');
+      // $('h1, p, li').css('background-color', 'blue');
+      //
+      // let h1Alert = $('h1').html()
+      // alert(h1Alert);
       // only alerts h1 for Monday and not Tuesday
       // $('h1').css('background-color', 'red');
+
+      $('h1').click(function (){
+          $(this).css('background-color', 'red');
+      });
+
+      $('p').dblclick(function() {
+          $(this).css('font-size', '18px');
+      });
+
+      $('li').hover(
+          function() {
+              $(this).css('color', 'red');
+          }, function() {
+              $(this).css('color', 'black');
+          }
+      );
   </script>
 </body>
 </html>
