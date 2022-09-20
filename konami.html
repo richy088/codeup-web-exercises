@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script
+          src="https://code.jquery.com/jquery-3.6.1.js"
+          integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+          crossorigin="anonymous"></script>
+  <title>Konami Code</title>
+</head>
+<body>
+<h1>Konami Code</h1>
+
+<script src="/js/jquery.js"></script>
+<script>
+  "use strict";
+
+  let keyString = "";
+  $(document).keyup(function(event){
+    keyString += event.keyCode;
+    console.log(keyString);
+    if (keyString === "38384040373937396566") {
+      alert("You have added 30 lives!")
+    }
+  });
+
+  //need to match 38384040373937396566
+
+</script>
+</body>
+</html>
