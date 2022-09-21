@@ -1,8 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script
+          src="https://code.jquery.com/jquery-3.6.1.js"
+          integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+          crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <title>Title</title>
+  <style>
+    .invisible {
+      background-color: yellow;
+    }
+  </style>
 </head>
 <body>
   <dl>
@@ -29,6 +38,23 @@
 
       <dt>Rocky Mountain</dt>
       <dd>A sea serpent.</dd>
+
+    <a class="toggle-link" href="#">Click here</a>
+
+    <script>
+      $('dd').addClass('invisible');
+      $('.invisible').css({
+        // 'visibility': 'hidden',
+        'background-color': 'blue'
+      });
+
+      //can't add a class and styles with jquery and then immediately assign it to another tag? Have to add via css to use on any tag?
+
+      $('.toggle-link').click(function() {
+        $('dt').toggleClass('invisible')
+      });
+
+    </script>
   </dl>
 </body>
 </html>
