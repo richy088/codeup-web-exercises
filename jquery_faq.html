@@ -86,8 +86,11 @@
       // });
 
       $('button').click(function() {
-          $('ul').children().css('background-color', 'yellow');
+        $('#national-parks').children().last().css('background-color', 'yellow');
+        $('#state-parks-texas').children().last().css('background-color', 'yellow');
+        //this works but duplicate code?
         // $('#national-parks, #state-parks-texas').children().last().css('background-color', 'yellow');
+        //this only selects the last child of the second ul?
       });
 
       //need just the last one of each ul group, not all the li children
