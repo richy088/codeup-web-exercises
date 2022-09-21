@@ -14,6 +14,25 @@
   </style>
 </head>
 <body>
+  <h3 id="national-parks-heading">National Parks</h3>
+  <ul id="national-parks">
+    <li>Arches</li>
+    <li>Badlands</li>
+    <li>Carlsbad Caverns</li>
+    <li>Denali</li>
+    <li>Everglades</li>
+  </ul>
+  <h3>State Parks of Texas</h3>
+  <ul id="state-parks-texas">
+    <li>Abilene</li>
+    <li>Big Bend</li>
+    <li>Choke Canyon</li>
+    <li>Davis Mountains</li>
+    <li>Enchanted Rock</li>
+  </ul>
+
+  <button>I'm a button</button>
+
   <dl>
     <dt>Yosemite</dt>
     <dd>One of California's most-visited national parks, Yosemite National Park stands out for its bevy of impressive waterfalls, such as Vernal Fall and Bridalveil Fall, as well as unique granite rock formations like Half Dome and El Capitan.</dd>
@@ -48,7 +67,7 @@
         'background-color': 'blue'
       });
 
-      //can't add a class and styles with jquery and then immediately assign it to another tag? Have to add via css to use on any tag?
+      //can't add a class and styles with jquery and then immediately assign it to another tag? Have to add via css or global styles to use on any tag?
 
       $('.toggle-link').click(function() {
         $('dt').toggleClass('invisible')
@@ -57,6 +76,16 @@
       $('dt').click(function() {
         $(this).toggleClass('invisible')
       });
+
+
+      // $('button').click(function() {
+      //   $('ul').each(function() {
+      //     $('ul').children().last().css('background-color', 'yellow');
+      //   });
+      //   // $('#national-parks, #state-parks-texas').children().last().css('background-color', 'yellow');
+      // });
+
+
 
     </script>
   </dl>
