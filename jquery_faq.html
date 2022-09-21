@@ -85,7 +85,25 @@
       //   // $('#national-parks, #state-parks-texas').children().last().css('background-color', 'yellow');
       // });
 
+      $('button').click(function() {
+          $('ul').children().css('background-color', 'yellow');
+        // $('#national-parks, #state-parks-texas').children().last().css('background-color', 'yellow');
+      });
 
+      //need just the last one of each ul group, not all the li children
+
+
+      $('h3').click(function () {
+        $(this).next().children().css('font-weight', 'bold');
+      });
+
+      //works!
+
+      $('li').click(function () {
+        $(this).parent().children().first().css('color', 'blue');
+      });
+
+      //works!
 
     </script>
   </dl>
