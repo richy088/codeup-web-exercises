@@ -1,11 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
     <div id="posts"></div>
+    <script>
+        $.ajax("data/blog.json").done(function (data){
+            console.log(data);
+            $.each(data, function (key, value){
+                let html = "";
+                html += '<h2>' + value.title + '</h2>';
+                html += '<p>' + value.content + '</p>';
+                html += '<p>' + value.categories + '</p>';
+                $('#posts').append(html);
+            });
+        });
 
+    </script>
 </body>
 </html>
