@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js'></script>
+    <script src="js/mapbox-geocoder-utils.js"></script>
   <link href='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css' rel='stylesheet' />
 </head>
 <body>
@@ -39,8 +40,18 @@
 
   let alamoPopup = new mapboxgl.Popup()
           .setHTML("<p>Remember The Alamo!</p>")
+        marker.setPopup(alamoPopup)
 
-  marker.setPopup(alamoPopup)
+  geocode("6674 Eagle Ridge dr El Paso, TX 79912", 'pk.eyJ1IjoicmljaHkwODgiLCJhIjoiY2w4ZDVvYjFpMGRmdjN0bnRxcWM1aXNvYSJ9.lLbE5w12ggb4a1n15Na5-g').then(function(result) {
+      console.log(result);
+      map.setCenter(result);
+      map.setZoom(17);
+      let markerFood = new mapboxgl.Marker()
+          .setLngLat([result[0], result[1]])
+          .addTo(map);
+  });
+
+
 </script>
 </body>
 </html>
