@@ -17,7 +17,7 @@
   const map = new mapboxgl.Map({
     container: 'map', // container ID
     style: 'mapbox://styles/mapbox/streets-v11', // style URL
-    center: [-157.858093, 21.315603], // starting position [lng, lat]
+    center: [-98.491142, 29.424349], // starting position [lng, lat]
     zoom: 9, // starting zoom
     projection: 'globe' // display the map as a 3D globe
   });
@@ -38,18 +38,52 @@
   //         .setLngLat([23.424076, 53.847818])
   //         .addTo(map);
 
-  let alamoPopup = new mapboxgl.Popup()
-          .setHTML("<p>Remember The Alamo!</p>")
-        marker.setPopup(alamoPopup)
+  // let alamoPopup = new mapboxgl.Popup()
+  //         .setHTML("<p>Remember The Alamo!</p>")
+  //       marker.setPopup(alamoPopup)
+
+  let favRestaurants = [
+      {"name": "Brasao",
+          "food": "Brazilian steakhouse",
+      "addresss": "19210 W I-10, San Antonio, TX 78257"},
+      {"name": "Sushihana",
+          "food": "sushi",
+          "addresss": "1810 NW Military Hwy, San Antonio, TX 78213" },
+      {"name": "Lick",
+          "food": "ice cream",
+          "addresss": "312 Pearl Pkwy #2101, San Antonio, TX 78215"}
+  ];
+
+  favRestaurants.forEach(function(value){
+      let foodAddress = value.addresss;
+      geocode(foodAddress, 'pk.eyJ1IjoicmljaHkwODgiLCJhIjoiY2w4ZDVvYjFpMGRmdjN0bnRxcWM1aXNvYSJ9.lLbE5w12ggb4a1n15Na5-g').then(function(result) {
+          console.log(result);
+
+          let markerFood = new mapboxgl.Marker()
+              .setLngLat([result[0], result[1]])
+              .addTo(map);
+
+          let homePopup = new mapboxgl.Popup()
+              .setHTML("<p>" + value.name + "<br>" + value.food + "</p>")
+          markerFood.setPopup(homePopup);
+      });
+  });
+
 
   geocode("6674 Eagle Ridge dr El Paso, TX 79912", 'pk.eyJ1IjoicmljaHkwODgiLCJhIjoiY2w4ZDVvYjFpMGRmdjN0bnRxcWM1aXNvYSJ9.lLbE5w12ggb4a1n15Na5-g').then(function(result) {
-      console.log(result);
-      map.setCenter(result);
-      map.setZoom(17);
+
+      map.setZoom(10);
+
       let markerFood = new mapboxgl.Marker()
           .setLngLat([result[0], result[1]])
           .addTo(map);
+
+      let homePopup = new mapboxgl.Popup()
+          .setHTML("<p>Mom's House!</p>")
+      markerFood.setPopup(homePopup);
   });
+
+
 
 
 </script>
