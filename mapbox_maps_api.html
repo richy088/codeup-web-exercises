@@ -18,7 +18,7 @@
     container: 'map', // container ID
     style: 'mapbox://styles/mapbox/streets-v11', // style URL
     center: [-98.491142, 29.424349], // starting position [lng, lat]
-    zoom: 9, // starting zoom
+    zoom: 5, // starting zoom
     projection: 'globe' // display the map as a 3D globe
   });
   map.on('style.load', () => {
@@ -54,25 +54,190 @@
           "addresss": "312 Pearl Pkwy #2101, San Antonio, TX 78215"}
   ];
 
-  favRestaurants.forEach(function(value){
-      let foodAddress = value.addresss;
-      geocode(foodAddress, 'pk.eyJ1IjoicmljaHkwODgiLCJhIjoiY2w4ZDVvYjFpMGRmdjN0bnRxcWM1aXNvYSJ9.lLbE5w12ggb4a1n15Na5-g').then(function(result) {
-          console.log(result);
+  let country = [
+      {"name": "Argentina",
+        "longitude": -63.616672,
+        "latitude": -38.416097},
+      {"name": "United Arab Emirates",
+          "longitude": 53.847818,
+          "latitude": 23.424076},
+      {"name": "Austria",
+          "longitude": 14.550072,
+          "latitude": 47.516231},
+      {"name": "Australia",
+          "longitude": 133.775136,
+          "latitude": -25.274398},
+      {"name": "Azerbaijan",
+          "longitude": 	47.576927,
+          "latitude": 40.143105},
+      {"name": "Belgium",
+          "longitude": 	4.469936,
+          "latitude": 50.503887},
+      {"name": "Bahrain",
+          "longitude": 50.637772,
+          "latitude": 25.930414},
+      {"name": "Brazil",
+          "longitude": -51.92528,
+          "latitude": -14.235004},
+      {"name": "Canada",
+          "longitude": 	-106.346771,
+          "latitude": 56.130366},
+      {"name": "Chile",
+          "longitude": -71.542969,
+          "latitude": -35.675147},
+      {"name": "Colombia",
+          "longitude": -74.297333,
+          "latitude": 	4.570868},
+      {"name": "Czech Republic",
+          "longitude": 	15.472962,
+          "latitude": 	49.817492},
+      {"name": "Germany",
+          "longitude": 	10.451526,
+          "latitude": 	51.165691},
+      {"name": "Egypt",
+          "longitude": 	30.802498,
+          "latitude": 	26.820553},
+      {"name": "Spain",
+          "longitude": 	-3.74922,
+          "latitude": 	40.463667},
+      {"name": "Ethiopia",
+          "longitude": 	40.489673,
+          "latitude": 		9.145},
+      {"name": "France",
+          "longitude": 	2.213749,
+          "latitude": 	46.227638},
+      {"name": "United Kingdom",
+          "longitude": 	-3.435973,
+          "latitude": 	55.378051},
+      {"name": "Hong Kong",
+          "longitude": 	114.109497,
+          "latitude": 	22.396428},
+      {"name": "Croatia",
+          "longitude": 	15.2,
+          "latitude": 	45.1},
+      {"name": "Hungary",
+          "longitude": 	19.503304,
+          "latitude": 	47.162494},
+      {"name": "Indonesia",
+          "longitude": 	113.921327,
+          "latitude": 	-0.789275},
+      {"name": "Ireland",
+          "longitude": 	-8.24389,
+          "latitude": 	53.41291},
+      {"name": "India",
+          "longitude": 	78.96288,
+          "latitude": 	20.593684},
+      {"name": "Iceland",
+          "longitude": 	-19.020835,
+          "latitude": 	64.963051},
+      {"name": "Italy",
+          "longitude": 	12.56738,
+          "latitude": 	41.87194},
+      {"name": "Jamaica",
+          "longitude": 	-77.297508,
+          "latitude": 	18.109581},
+      {"name": "Jordan",
+          "longitude": 	36.238414,
+          "latitude": 	30.585164},
+      {"name": "Japan",
+          "longitude": 	138.252924,
+          "latitude": 	36.204824},
+      {"name": "Kenya",
+          "longitude": 	37.906193,
+          "latitude": 	-0.023559},
+      {"name": "South Korea",
+          "longitude": 	127.766922,
+          "latitude": 	35.907757},
+      {"name": "Kuwait",
+          "longitude": 	47.481766,
+          "latitude": 	29.31166},
+      {"name": "Sri Lanka",
+          "longitude": 	80.771797,
+          "latitude": 	7.873054},
+      {"name": "Morocco",
+          "longitude": 	-7.09262,
+          "latitude": 	31.791702},
+      {"name": "Maldives",
+          "longitude": 	73.22068,
+          "latitude": 	3.202778},
+      {"name": "Mexico",
+          "longitude": 	-102.552784,
+          "latitude": 	23.634501},
+      {"name": "Malaysia",
+          "longitude": 	101.975766,
+          "latitude": 	4.210484},
+      {"name": "Netherlands",
+          "longitude": 	5.291266,
+          "latitude": 	52.132633},
+      {"name": "Oman",
+          "longitude": 	55.923255,
+          "latitude": 	21.512583},
+      {"name": "Panama",
+          "longitude": 	-80.782127,
+          "latitude": 	8.537981},
+      {"name": "Peru",
+          "longitude": 	-75.015152,
+          "latitude": 	-9.189967},
+      {"name": "Philippines",
+          "longitude": 	121.774017,
+          "latitude": 	12.879721},
+      {"name": "Poland",
+          "longitude": 	19.145136,
+          "latitude": 	51.919438},
+      {"name": "Puerto Rico",
+          "longitude": 	-66.590149,
+          "latitude": 	18.220833},
+      {"name": "Portugal",
+          "longitude": 	-8.224454,
+          "latitude": 	39.399872},
+      {"name": "Qatar",
+          "longitude": 	51.183884,
+          "latitude": 	25.354826},
+      {"name": "Saudi Arabia",
+          "longitude": 	45.079162,
+          "latitude": 	23.885942},
+      {"name": "Singapore",
+          "longitude": 	103.819836,
+          "latitude": 	1.352083},
+      {"name": "Slovenia",
+          "longitude": 	14.995463,
+          "latitude": 	46.151241},
+      {"name": "Thailand",
+          "longitude": 	100.992541,
+          "latitude": 	15.870032},
+      {"name": "Vietnam",
+          "longitude": 	108.277199,
+          "latitude": 	14.058324},
+      {"name": "South Africa",
+          "longitude": 	22.937506,
+          "latitude": 	-30.559482}
+  ];
 
-          let markerFood = new mapboxgl.Marker()
-              .setLngLat([result[0], result[1]])
-              .addTo(map);
+  country.forEach(function(value){
+      let marker = new mapboxgl.Marker()
+          .setLngLat([value.longitude, value.latitude])
+          .addTo(map);
+  })
 
-          let homePopup = new mapboxgl.Popup()
-              .setHTML("<p>" + value.name + "<br>" + value.food + "</p>")
-          markerFood.setPopup(homePopup);
-      });
-  });
+  // favRestaurants.forEach(function(value){
+  //     let foodAddress = value.addresss;
+  //     geocode(foodAddress, 'pk.eyJ1IjoicmljaHkwODgiLCJhIjoiY2w4ZDVvYjFpMGRmdjN0bnRxcWM1aXNvYSJ9.lLbE5w12ggb4a1n15Na5-g').then(function(result) {
+  //         console.log(result);
+  //
+  //         let markerFood = new mapboxgl.Marker()
+  //             .setLngLat([result[0], result[1]])
+  //             .addTo(map);
+  //
+  //         let homePopup = new mapboxgl.Popup()
+  //             .setHTML("<p>" + value.name + "<br>" + value.food + "</p>")
+  //         markerFood.setPopup(homePopup);
+  //     });
+  // });
 
 
   geocode("6674 Eagle Ridge dr El Paso, TX 79912", 'pk.eyJ1IjoicmljaHkwODgiLCJhIjoiY2w4ZDVvYjFpMGRmdjN0bnRxcWM1aXNvYSJ9.lLbE5w12ggb4a1n15Na5-g').then(function(result) {
 
-      map.setZoom(10);
+      map.setZoom(2);
 
       let markerFood = new mapboxgl.Marker()
           .setLngLat([result[0], result[1]])
