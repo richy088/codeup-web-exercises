@@ -5,6 +5,7 @@
     <title>Title</title>
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js'></script>
     <script src="js/mapbox-geocoder-utils.js"></script>
+    <script src="js/keys.js"></script>
   <link href='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css' rel='stylesheet' />
 </head>
 <body>
@@ -13,7 +14,7 @@
   // TO MAKE THE MAP APPEAR YOU MUST
   // ADD YOUR ACCESS TOKEN FROM
   // https://account.mapbox.com
-  mapboxgl.accessToken = 'pk.eyJ1IjoicmljaHkwODgiLCJhIjoiY2w4ZDVvYjFpMGRmdjN0bnRxcWM1aXNvYSJ9.lLbE5w12ggb4a1n15Na5-g';
+  mapboxgl.accessToken = MAPBOX_KEY;
   const map = new mapboxgl.Map({
     container: 'map', // container ID
     style: 'mapbox://styles/mapbox/streets-v11', // style URL
@@ -235,7 +236,7 @@
   // });
 
 
-  geocode("6674 Eagle Ridge dr El Paso, TX 79912", 'pk.eyJ1IjoicmljaHkwODgiLCJhIjoiY2w4ZDVvYjFpMGRmdjN0bnRxcWM1aXNvYSJ9.lLbE5w12ggb4a1n15Na5-g').then(function(result) {
+  geocode("6674 Eagle Ridge dr El Paso, TX 79912", MAPBOX_KEY).then(function(result) {
 
       map.setZoom(2);
 
