@@ -74,7 +74,7 @@ users.forEach(function(user) {
   const languages = user.languages;
 
   for ([name, email, languages] of users) {
-    console.log(`${name} ${email} ${languages}`);
+    console.log(name + email + languages);
   }
 
   });
