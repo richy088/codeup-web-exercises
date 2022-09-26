@@ -14,11 +14,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 <body>
-<!--<nav class="navbar fixed-top bg-light">-->
-<!--    <div class="container-fluid">-->
-<!--        <a class="navbar-brand" href="#">Weather App</a>-->
-<!--    </div>-->
-<!--</nav>-->
 
 <nav class="navbar navbar-dark bg-primary">
     <a class="navbar-brand" href="#">Weather App</a>
@@ -45,9 +40,7 @@
                 Featured
             </div>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">An item</li>
-                <li class="list-group-item">A second item</li>
-                <li class="list-group-item">A third item</li>
+                <li id="day1" class="list-group-item">An item</li>
             </ul>
         </div>
     </div>
@@ -57,9 +50,7 @@
                 Featured
             </div>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">An item</li>
-                <li class="list-group-item">A second item</li>
-                <li class="list-group-item">A third item</li>
+                <li id="day2" class="list-group-item">An item</li>
             </ul>
         </div>
     </div>
@@ -69,9 +60,7 @@
                 Featured
             </div>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">An item</li>
-                <li class="list-group-item">A second item</li>
-                <li class="list-group-item">A third item</li>
+                <li id="day3" class="list-group-item">An item</li>
             </ul>
         </div>
     </div>
@@ -81,9 +70,7 @@
                 Featured
             </div>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">An item</li>
-                <li class="list-group-item">A second item</li>
-                <li class="list-group-item">A third item</li>
+                <li id="day4" class="list-group-item">An item</li>
             </ul>
         </div>
     </div>
@@ -93,9 +80,7 @@
                 Featured
             </div>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">An item</li>
-                <li class="list-group-item">A second item</li>
-                <li class="list-group-item">A third item</li>
+                <li id="day5" class="list-group-item">An item</li>
             </ul>
         </div>
     </div>
@@ -104,28 +89,6 @@
 <div id='map' style='width: 1000px; height: 750px;'></div>
 
     <script>
-        // $.get("http://api.openweathermap.org/data/2.5/weather", {
-        //     APPID: WEATHER_KEY,
-        //      q: "San Antonio, US",
-        //     units: "imperial"
-        // }).done(function(data) {
-        //     let weatherDescription = data.weather[0].description;
-        //     let tempKey = data.main.temp;
-        // console.log(data);
-        // console.log(weatherDescription);
-        // });
-
-        // $.get("http://api.openweathermap.org/data/2.5/forecast", {
-        //     APPID: WEATHER_KEY,
-        //     lat:    29.423017,
-        //     lon:   -98.48527,
-        //     units: "imperial"
-        // }).done(function(data) {
-        //     console.log('5 day forecast', data);
-        // });
-
-        // api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={WEATHER_KEY}
-
         mapboxgl.accessToken = MAPBOX_KEY;
         const map = new mapboxgl.Map({
             container: 'map', // container ID
@@ -134,6 +97,27 @@
             zoom: 4, // starting zoom
             projection: 'globe' // display the map as a 3D globe
         });
+
+        $.get("http://api.openweathermap.org/data/2.5/forecast", {
+            APPID: WEATHER_KEY,
+            lat:   '29.424349',
+            lon:    '-98.491142',
+            units: "imperial"
+        }).done(function(data) {
+            console.log('5 day forecast', data);
+            $('#day1').html(`${data.list[0].main.temp_min}°F / ${data.list[0].main.temp_max}°F <br><hr> Description: ${data.list[0].weather[0].description} <br><hr> Humidity: ${data.list[0].main.humidity} <br><hr> Wind: ${data.list[0].wind.speed} <br><hr> Pressure: ${data.list[0].main.pressure}`)
+
+            $('#day2').html(`${data.list[7].main.temp_min}°F / ${data.list[7].main.temp_max}°F <br><hr> Description: ${data.list[7].weather[0].description} <br><hr> Humidity: ${data.list[7].main.humidity} <br><hr> Wind: ${data.list[7].wind.speed} <br><hr> Pressure: ${data.list[7].main.pressure}`)
+
+            $('#day3').html(`${data.list[15].main.temp_min}°F / ${data.list[15].main.temp_max}°F <br><hr> Description: ${data.list[15].weather[0].description} <br><hr> Humidity: ${data.list[15].main.humidity} <br><hr> Wind: ${data.list[15].wind.speed} <br><hr> Pressure: ${data.list[15].main.pressure}`)
+
+            $('#day4').html(`${data.list[23].main.temp_min}°F / ${data.list[23].main.temp_max}°F <br><hr> Description: ${data.list[23].weather[0].description} <br><hr> Humidity: ${data.list[23].main.humidity} <br><hr> Wind: ${data.list[23].wind.speed} <br><hr> Pressure: ${data.list[23].main.pressure}`)
+
+            $('#day5').html(`${data.list[31].main.temp_min}°F / ${data.list[31].main.temp_max}°F <br><hr> Description: ${data.list[31].weather[0].description} <br><hr> Humidity: ${data.list[31].main.humidity} <br><hr> Wind: ${data.list[31].wind.speed} <br><hr> Pressure: ${data.list[31].main.pressure}`)
+        });
+
+
+
         map.on('style.load', () => {
             map.setFog({}); // Set the default atmosphere style
         });
@@ -168,6 +152,15 @@
                     units: "imperial"
                 }).done(function(data) {
                     console.log('5 day forecast', data);
+                    $('#day1').html(`${data.list[0].main.temp_min}°F / ${data.list[0].main.temp_max}°F <br><hr> Description: ${data.list[0].weather[0].description} <br><hr> Humidity: ${data.list[0].main.humidity} <br><hr> Wind: ${data.list[0].wind.speed} <br><hr> Pressure: ${data.list[0].main.pressure}`)
+
+                    $('#day2').html(`${data.list[7].main.temp_min}°F / ${data.list[7].main.temp_max}°F <br><hr> Description: ${data.list[7].weather[0].description} <br><hr> Humidity: ${data.list[7].main.humidity} <br><hr> Wind: ${data.list[7].wind.speed} <br><hr> Pressure: ${data.list[7].main.pressure}`)
+
+                    $('#day3').html(`${data.list[15].main.temp_min}°F / ${data.list[15].main.temp_max}°F <br><hr> Description: ${data.list[15].weather[0].description} <br><hr> Humidity: ${data.list[15].main.humidity} <br><hr> Wind: ${data.list[15].wind.speed} <br><hr> Pressure: ${data.list[15].main.pressure}`)
+
+                    $('#day4').html(`${data.list[23].main.temp_min}°F / ${data.list[23].main.temp_max}°F <br><hr> Description: ${data.list[23].weather[0].description} <br><hr> Humidity: ${data.list[23].main.humidity} <br><hr> Wind: ${data.list[23].wind.speed} <br><hr> Pressure: ${data.list[23].main.pressure}`)
+
+                    $('#day5').html(`${data.list[31].main.temp_min}°F / ${data.list[31].main.temp_max}°F <br><hr> Description: ${data.list[31].weather[0].description} <br><hr> Humidity: ${data.list[31].main.humidity} <br><hr> Wind: ${data.list[31].wind.speed} <br><hr> Pressure: ${data.list[31].main.pressure}`)
                 });
 
             });
