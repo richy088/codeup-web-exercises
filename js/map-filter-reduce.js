@@ -52,8 +52,12 @@ const longOne = users.reduce(
     (previousValue, currentValue) => previousValue.length < currentValue.email.length ? currentValue.email : previousValue,
     '',);
 
-// #6:
+// #6: This one might not be quite right
 const instruct = users.reduce((previousValue, currentValue) => previousValue + currentValue.name + ",",
+    '',);
+
+// Bonus:
+const lang = users.reduce((previousValue, currentValue) => previousValue + currentValue.languages + ' ',
     '',);
 
 
