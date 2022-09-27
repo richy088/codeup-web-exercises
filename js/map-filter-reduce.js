@@ -36,5 +36,24 @@ const users = [
     }
 ];
 
+// #2:
 const result = users.filter(data => data.languages.length >= 3);
+
+// #3:
+const result1 = users.map(data => data.email);
+
+// #4:
+const sum = users.reduce(
+    (previousValue, currentValue) => previousValue + currentValue.yearsOfExperience,
+    0,);
+
+// #5:
+const longOne = users.reduce(
+    (previousValue, currentValue) => previousValue.length < currentValue.email.length ? currentValue.email : previousValue,
+    '',);
+
+// #6:
+const instruct = users.reduce((previousValue, currentValue) => previousValue + currentValue.name + ",",
+    '',);
+
 
