@@ -106,19 +106,19 @@
         }).done(function(data) {
             console.log('5 day forecast', data);
             $('#day1-title').html(`${data.list[0].dt_txt}`);
-            $('#day1').html(`${data.list[0].main.temp_min}°F / ${data.list[0].main.temp_max}°F <br><hr> Description: ${data.list[0].weather[0].description} <br><hr> Humidity: ${data.list[0].main.humidity} <br><hr> Wind: ${data.list[0].wind.speed} <br><hr> Pressure: ${data.list[0].main.pressure}`)
+            $('#day1').html(`${data.list[0].main.temp_min}°F / ${data.list[0].main.temp_max}°F <br><hr> Description: ${data.list[0].weather[0].description} <img src='http://openweathermap.org/img/wn/${data.list[0].weather[0].icon}@2x.png'> <br><hr> Humidity: ${data.list[0].main.humidity} <br><hr> Wind: ${data.list[0].wind.speed} <br><hr> Pressure: ${data.list[0].main.pressure}`)
 
             $('#day2-title').html(`${data.list[7].dt_txt}`);
-            $('#day2').html(`${data.list[7].main.temp_min}°F / ${data.list[7].main.temp_max}°F <br><hr> Description: ${data.list[7].weather[0].description} <br><hr> Humidity: ${data.list[7].main.humidity} <br><hr> Wind: ${data.list[7].wind.speed} <br><hr> Pressure: ${data.list[7].main.pressure}`)
+            $('#day2').html(`${data.list[7].main.temp_min}°F / ${data.list[7].main.temp_max}°F <br><hr> Description: ${data.list[7].weather[0].description} <img src='http://openweathermap.org/img/wn/${data.list[7].weather[0].icon}@2x.png'> <br><hr> Humidity: ${data.list[7].main.humidity} <br><hr> Wind: ${data.list[7].wind.speed} <br><hr> Pressure: ${data.list[7].main.pressure}`)
 
             $('#day3-title').html(`${data.list[15].dt_txt}`);
-            $('#day3').html(`${data.list[15].main.temp_min}°F / ${data.list[15].main.temp_max}°F <br><hr> Description: ${data.list[15].weather[0].description} <br><hr> Humidity: ${data.list[15].main.humidity} <br><hr> Wind: ${data.list[15].wind.speed} <br><hr> Pressure: ${data.list[15].main.pressure}`)
+            $('#day3').html(`${data.list[15].main.temp_min}°F / ${data.list[15].main.temp_max}°F <br><hr> Description: ${data.list[15].weather[0].description} <img src='http://openweathermap.org/img/wn/${data.list[15].weather[0].icon}@2x.png'> <br><hr> Humidity: ${data.list[15].main.humidity} <br><hr> Wind: ${data.list[15].wind.speed} <br><hr> Pressure: ${data.list[15].main.pressure}`)
 
             $('#day4-title').html(`${data.list[23].dt_txt}`);
-            $('#day4').html(`${data.list[23].main.temp_min}°F / ${data.list[23].main.temp_max}°F <br><hr> Description: ${data.list[23].weather[0].description} <br><hr> Humidity: ${data.list[23].main.humidity} <br><hr> Wind: ${data.list[23].wind.speed} <br><hr> Pressure: ${data.list[23].main.pressure}`)
+            $('#day4').html(`${data.list[23].main.temp_min}°F / ${data.list[23].main.temp_max}°F <br><hr> Description: ${data.list[23].weather[0].description} <img src='http://openweathermap.org/img/wn/${data.list[23].weather[0].icon}@2x.png'> <br><hr> Humidity: ${data.list[23].main.humidity} <br><hr> Wind: ${data.list[23].wind.speed} <br><hr> Pressure: ${data.list[23].main.pressure}`)
 
             $('#day5-title').html(`${data.list[31].dt_txt}`);
-            $('#day5').html(`${data.list[31].main.temp_min}°F / ${data.list[31].main.temp_max}°F <br><hr> Description: ${data.list[31].weather[0].description} <br><hr> Humidity: ${data.list[31].main.humidity} <br><hr> Wind: ${data.list[31].wind.speed} <br><hr> Pressure: ${data.list[31].main.pressure}`)
+            $('#day5').html(`${data.list[31].main.temp_min}°F / ${data.list[31].main.temp_max}°F <br><hr> Description: ${data.list[31].weather[0].description} <img src='http://openweathermap.org/img/wn/${data.list[31].weather[0].icon}@2x.png'> <br><hr> Humidity: ${data.list[31].main.humidity} <br><hr> Wind: ${data.list[31].wind.speed} <br><hr> Pressure: ${data.list[31].main.pressure}`)
         });
 
 
@@ -159,16 +159,20 @@
                     lon:    lngLat.lng,
                     units: "imperial"
                 }).done(function(data) {
-                    console.log('5 day forecast', data);
-                    $('#day1').html(`${data.list[0].main.temp_min}°F / ${data.list[0].main.temp_max}°F <br><hr> Description: ${data.list[0].weather[0].description} <br><hr> Humidity: ${data.list[0].main.humidity} <br><hr> Wind: ${data.list[0].wind.speed} <br><hr> Pressure: ${data.list[0].main.pressure}`)
+                    $('#day1-title').html(`${data.list[0].dt_txt}`);
+                    $('#day1').html(`${data.list[0].main.temp_min}°F / ${data.list[0].main.temp_max}°F <br><hr> Description: ${data.list[0].weather[0].description} <img src='http://openweathermap.org/img/wn/${data.list[0].weather[0].icon}@2x.png'> <br><hr> Humidity: ${data.list[0].main.humidity} <br><hr> Wind: ${data.list[0].wind.speed} <br><hr> Pressure: ${data.list[0].main.pressure}`)
 
-                    $('#day2').html(`${data.list[7].main.temp_min}°F / ${data.list[7].main.temp_max}°F <br><hr> Description: ${data.list[7].weather[0].description} <br><hr> Humidity: ${data.list[7].main.humidity} <br><hr> Wind: ${data.list[7].wind.speed} <br><hr> Pressure: ${data.list[7].main.pressure}`)
+                    $('#day2-title').html(`${data.list[7].dt_txt}`);
+                    $('#day2').html(`${data.list[7].main.temp_min}°F / ${data.list[7].main.temp_max}°F <br><hr> Description: ${data.list[7].weather[0].description} <img src='http://openweathermap.org/img/wn/${data.list[7].weather[0].icon}@2x.png'> <br><hr> Humidity: ${data.list[7].main.humidity} <br><hr> Wind: ${data.list[7].wind.speed} <br><hr> Pressure: ${data.list[7].main.pressure}`)
 
-                    $('#day3').html(`${data.list[15].main.temp_min}°F / ${data.list[15].main.temp_max}°F <br><hr> Description: ${data.list[15].weather[0].description} <br><hr> Humidity: ${data.list[15].main.humidity} <br><hr> Wind: ${data.list[15].wind.speed} <br><hr> Pressure: ${data.list[15].main.pressure}`)
+                    $('#day3-title').html(`${data.list[15].dt_txt}`);
+                    $('#day3').html(`${data.list[15].main.temp_min}°F / ${data.list[15].main.temp_max}°F <br><hr> Description: ${data.list[15].weather[0].description} <img src='http://openweathermap.org/img/wn/${data.list[15].weather[0].icon}@2x.png'> <br><hr> Humidity: ${data.list[15].main.humidity} <br><hr> Wind: ${data.list[15].wind.speed} <br><hr> Pressure: ${data.list[15].main.pressure}`)
 
-                    $('#day4').html(`${data.list[23].main.temp_min}°F / ${data.list[23].main.temp_max}°F <br><hr> Description: ${data.list[23].weather[0].description} <br><hr> Humidity: ${data.list[23].main.humidity} <br><hr> Wind: ${data.list[23].wind.speed} <br><hr> Pressure: ${data.list[23].main.pressure}`)
+                    $('#day4-title').html(`${data.list[23].dt_txt}`);
+                    $('#day4').html(`${data.list[23].main.temp_min}°F / ${data.list[23].main.temp_max}°F <br><hr> Description: ${data.list[23].weather[0].description} <img src='http://openweathermap.org/img/wn/${data.list[23].weather[0].icon}@2x.png'> <br><hr> Humidity: ${data.list[23].main.humidity} <br><hr> Wind: ${data.list[23].wind.speed} <br><hr> Pressure: ${data.list[23].main.pressure}`)
 
-                    $('#day5').html(`${data.list[31].main.temp_min}°F / ${data.list[31].main.temp_max}°F <br><hr> Description: ${data.list[31].weather[0].description} <br><hr> Humidity: ${data.list[31].main.humidity} <br><hr> Wind: ${data.list[31].wind.speed} <br><hr> Pressure: ${data.list[31].main.pressure}`)
+                    $('#day5-title').html(`${data.list[31].dt_txt}`);
+                    $('#day5').html(`${data.list[31].main.temp_min}°F / ${data.list[31].main.temp_max}°F <br><hr> Description: ${data.list[31].weather[0].description} <img src='http://openweathermap.org/img/wn/${data.list[31].weather[0].icon}@2x.png'> <br><hr> Humidity: ${data.list[31].main.humidity} <br><hr> Wind: ${data.list[31].wind.speed} <br><hr> Pressure: ${data.list[31].main.pressure}`)
 
                     });
             }
@@ -214,15 +218,20 @@
                     units: "imperial"
                 }).done(function(data) {
                     console.log('5 day forecast', data);
-                    $('#day1').html(`${data.list[0].main.temp_min}°F / ${data.list[0].main.temp_max}°F <br><hr> Description: ${data.list[0].weather[0].description} <br><hr> Humidity: ${data.list[0].main.humidity} <br><hr> Wind: ${data.list[0].wind.speed} <br><hr> Pressure: ${data.list[0].main.pressure}`)
+                    $('#day1-title').html(`${data.list[0].dt_txt}`);
+                    $('#day1').html(`${data.list[0].main.temp_min}°F / ${data.list[0].main.temp_max}°F <br><hr> Description: ${data.list[0].weather[0].description} <img src='http://openweathermap.org/img/wn/${data.list[0].weather[0].icon}@2x.png'> <br><hr> Humidity: ${data.list[0].main.humidity} <br><hr> Wind: ${data.list[0].wind.speed} <br><hr> Pressure: ${data.list[0].main.pressure}`)
 
-                    $('#day2').html(`${data.list[7].main.temp_min}°F / ${data.list[7].main.temp_max}°F <br><hr> Description: ${data.list[7].weather[0].description} <br><hr> Humidity: ${data.list[7].main.humidity} <br><hr> Wind: ${data.list[7].wind.speed} <br><hr> Pressure: ${data.list[7].main.pressure}`)
+                    $('#day2-title').html(`${data.list[7].dt_txt}`);
+                    $('#day2').html(`${data.list[7].main.temp_min}°F / ${data.list[7].main.temp_max}°F <br><hr> Description: ${data.list[7].weather[0].description} <img src='http://openweathermap.org/img/wn/${data.list[7].weather[0].icon}@2x.png'> <br><hr> Humidity: ${data.list[7].main.humidity} <br><hr> Wind: ${data.list[7].wind.speed} <br><hr> Pressure: ${data.list[7].main.pressure}`)
 
-                    $('#day3').html(`${data.list[15].main.temp_min}°F / ${data.list[15].main.temp_max}°F <br><hr> Description: ${data.list[15].weather[0].description} <br><hr> Humidity: ${data.list[15].main.humidity} <br><hr> Wind: ${data.list[15].wind.speed} <br><hr> Pressure: ${data.list[15].main.pressure}`)
+                    $('#day3-title').html(`${data.list[15].dt_txt}`);
+                    $('#day3').html(`${data.list[15].main.temp_min}°F / ${data.list[15].main.temp_max}°F <br><hr> Description: ${data.list[15].weather[0].description} <img src='http://openweathermap.org/img/wn/${data.list[15].weather[0].icon}@2x.png'> <br><hr> Humidity: ${data.list[15].main.humidity} <br><hr> Wind: ${data.list[15].wind.speed} <br><hr> Pressure: ${data.list[15].main.pressure}`)
 
-                    $('#day4').html(`${data.list[23].main.temp_min}°F / ${data.list[23].main.temp_max}°F <br><hr> Description: ${data.list[23].weather[0].description} <br><hr> Humidity: ${data.list[23].main.humidity} <br><hr> Wind: ${data.list[23].wind.speed} <br><hr> Pressure: ${data.list[23].main.pressure}`)
+                    $('#day4-title').html(`${data.list[23].dt_txt}`);
+                    $('#day4').html(`${data.list[23].main.temp_min}°F / ${data.list[23].main.temp_max}°F <br><hr> Description: ${data.list[23].weather[0].description} <img src='http://openweathermap.org/img/wn/${data.list[23].weather[0].icon}@2x.png'> <br><hr> Humidity: ${data.list[23].main.humidity} <br><hr> Wind: ${data.list[23].wind.speed} <br><hr> Pressure: ${data.list[23].main.pressure}`)
 
-                    $('#day5').html(`${data.list[31].main.temp_min}°F / ${data.list[31].main.temp_max}°F <br><hr> Description: ${data.list[31].weather[0].description} <br><hr> Humidity: ${data.list[31].main.humidity} <br><hr> Wind: ${data.list[31].wind.speed} <br><hr> Pressure: ${data.list[31].main.pressure}`)
+                    $('#day5-title').html(`${data.list[31].dt_txt}`);
+                    $('#day5').html(`${data.list[31].main.temp_min}°F / ${data.list[31].main.temp_max}°F <br><hr> Description: ${data.list[31].weather[0].description} <img src='http://openweathermap.org/img/wn/${data.list[31].weather[0].icon}@2x.png'> <br><hr> Humidity: ${data.list[31].main.humidity} <br><hr> Wind: ${data.list[31].wind.speed} <br><hr> Pressure: ${data.list[31].main.pressure}`)
                 });
 
             });
